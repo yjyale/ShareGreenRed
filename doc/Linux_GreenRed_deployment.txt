@@ -1,0 +1,62 @@
+
+GreenRed Deployment Instructions
+Yue Ji June 27, 2012
+Updated on April 11, 2016
+
+
+- This application should deploy to reportsdb server. This application doesn't need to use CAS authentication.
+
+- This application should point everything to Production (prodorbdb) although it's running on reportsdb server. 
+
+- The application deployment package always stays on development server, unless there is the special note. 
+
+- Current development server is libapp-dev.
+
+- Please always deploy/re-deploy the war file (or entire directory, but prefer war file) from development server. Please DON'T deploy/re-deploy the files partially.
+
+- All data sources, directories, files indicated here are from development server. After deploying or re-deploying to production server, these data should be changed to production server environment correspondingly (may not be exactly).
+
+
+
+Steps:
+
+- The module name is GreenRed.
+
+- The application package is located on development server: /usr/local/Tomcat80/webapps/GreenRed.
+
+- The war file GreenRed.war is located at development server: /usr/local/Tomcat80/webapps.
+
+- The server data is configured in the following one file:
+
+  1). /usr/local/Tomcat80/webapps/GreenRed/META-INF/context.xml
+
+      Point production Voyater prodorbdb (do not use deleon) in the url parameter:
+      <Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxTotal="100" maxIdle="30" maxWaitMillis="-1" name="jdbc/ReportsDB" username="lsoprog" password="xxxxxx" type="javax.sql.DataSource" url="jdbc:oracle:thin:@clark.library.yale.edu:1521:VGER" validationQuery="select 1 from dual"/>
+
+      Point production MySQL server minerva, schema lib_lms, user account with write permission in the url parameter:
+  <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxTotal="100" maxIdle="30" maxWaitMillis="-1" name="jdbc/MySQLDB" username="liblmstestwrite" password="xxxxxx" type="javax.sql.DataSource" url="jdbc:mysql://minerva.library.yale.edu:3306/lib_lms_test?autoReconnect=true" validationQuery="select 1 from dual"/>
+             
+                      
+
+- Deploy GreenRed.
+
+   1). After the deploy is done, stop GreenRed.
+
+   2).  Make changes in:
+           /usr/local/Tomcat80/webapps/GreenRed/META-INF/context.xml
+         
+   3). Re-Start GreenRed.
+
+   4). Verification procedure:
+
+	Type in corresponding information with following URL in the browser: 
+
+        http://[server].library.yale.edu/GreenRed
+        
+       If you can see the screen with title "Yale University Library Security Check Items", the application is successfully deployed.
+
+
+
+Contacts.
+
+- Library IT: Bob Rice <robert.rice@yale.edu>, Yue Ji [yue.ji@yale.edu]

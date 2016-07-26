@@ -1,0 +1,103 @@
+/*
+ *  Copyright (c) 2013-2015 Yale University. All rights reserved.
+ *
+ *  THIS SOFTWARE IS PROVIDED "AS IS," AND ANY EXPRESS OR IMPLIED
+ *  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ *  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE, ARE EXPRESSLY
+ *  DISCLAIMED. IN NO EVENT SHALL YALE UNIVERSITY OR ITS EMPLOYEES BE
+ *  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ *  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED, THE COSTS OF
+ *  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR
+ *  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ *  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ *  SOFTWARE, EVEN IF ADVISED IN ADVANCE OF THE POSSIBILITY OF SUCH
+ *  DAMAGE.
+ *
+ *  Redistribution and use of this software in source or binary forms,
+ *  with or without modification, are permitted, provided that the
+ *  following conditions are met:
+ *
+ *  1. Any redistribution must include the above copyright notice and
+ *  disclaimer and this list of conditions in any related documentation
+ *  and, if feasible, in the redistributed software.
+ *
+ *  2. Any redistribution must include the acknowledgment, "This product
+ *  includes software developed by Yale University," in any related
+ *  documentation and, if feasible, in the redistributed software.
+ *
+ *  3. The names "Yale" and "Yale University" must not be used to endorse
+ *  or promote products derived from this software.
+ */
+ 
+/* Copyright 2004 Yale University
+   Author: Yue Ji 
+   Created on August 11, 2004, 10:25 AM
+   WriteEmailForm.css
+*/
+
+.WriteEmailForm_body { 
+    background-color: #F8FFFF
+}
+
+.WriteEmailForm_table {
+        background-color: #CCCCCC;
+        width: 60%;
+        height: 70%;
+        border-bottom-width; 10px;
+ 	border-right-width: 10px;
+	border-left-width: 10px;
+	border-top-width: 10px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #F0DDBF;
+	border-left-color: #F0DDBF;
+	border-top-color: #F0DDBF;
+        border-bottom-color: #F0DDBF
+}
+
+.WriteEmailForm_bgcolor1 {
+        background-color: #F0DDBF
+}
+
+.WriteEmailForm_bgcolor2 {
+        background-color: #99CCCC
+}
+
+.WriteEmailForm_title {   
+        font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bolder;
+        color: #0033CC;
+        text-align: center
+}
+
+.WriteEmailForm_subtitle {
+        font-family: Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: bolder;
+        color: #0033CC;
+        text-align: center
+}
+
+.WriteEmailForm_input_text {
+        background-color: #F8FFF0;
+        font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+        color: #0033CC
+}
+
+.WriteEmailForm_submit_button {
+        width: 60; 
+        color: #0033CC; 
+        border-color: #CCCCCC; 
+        border-width: 1px; 
+        background-color: #F0DDBF
+}
